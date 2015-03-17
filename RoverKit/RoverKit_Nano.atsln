@@ -1,0 +1,66 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Atmel Studio Solution File, Format Version 11.00
+Project("{E66E83B9-2572-4076-B26E-6BE79FF3018A}") = "RoverTest", "..\..\RoverTest\RoverTest.cppproj", "{0B50CBDE-3AF7-4528-9F68-5F3EABC78E09}"
+	ProjectSection(ProjectDependencies) = postProject
+		{0F88691D-AE22-4340-BE1A-B6AA26CFA860} = {0F88691D-AE22-4340-BE1A-B6AA26CFA860}
+		{27AEB0C7-718F-4CFE-9612-76288019BD29} = {27AEB0C7-718F-4CFE-9612-76288019BD29}
+	EndProjectSection
+EndProject
+Project("{E66E83B9-2572-4076-B26E-6BE79FF3018A}") = "Platform", "..\Platform\Platform.cppproj", "{0F88691D-AE22-4340-BE1A-B6AA26CFA860}"
+EndProject
+Project("{E66E83B9-2572-4076-B26E-6BE79FF3018A}") = "Electric", "..\Electric\Electric.cppproj", "{27AEB0C7-718F-4CFE-9612-76288019BD29}"
+	ProjectSection(ProjectDependencies) = postProject
+		{0F88691D-AE22-4340-BE1A-B6AA26CFA860} = {0F88691D-AE22-4340-BE1A-B6AA26CFA860}
+	EndProjectSection
+EndProject
+Project("{E66E83B9-2572-4076-B26E-6BE79FF3018A}") = "ThreeWire", "..\ThreeWire\ThreeWire.cppproj", "{F9354CEE-0A1F-4439-AEA5-65764818B549}"
+	ProjectSection(ProjectDependencies) = postProject
+		{0F88691D-AE22-4340-BE1A-B6AA26CFA860} = {0F88691D-AE22-4340-BE1A-B6AA26CFA860}
+	EndProjectSection
+EndProject
+Project("{E66E83B9-2572-4076-B26E-6BE79FF3018A}") = "Navigation", "..\Navigation\Navigation.cppproj", "{BD000613-B9FB-4F54-81DF-7A3F4E804AAA}"
+	ProjectSection(ProjectDependencies) = postProject
+		{0F88691D-AE22-4340-BE1A-B6AA26CFA860} = {0F88691D-AE22-4340-BE1A-B6AA26CFA860}
+	EndProjectSection
+EndProject
+Project("{E66E83B9-2572-4076-B26E-6BE79FF3018A}") = "RealTimeClock", "..\RealTimeClock\RealTimeClock.cppproj", "{956947BF-1C77-47E0-81CF-72DA727485F4}"
+	ProjectSection(ProjectDependencies) = postProject
+		{0F88691D-AE22-4340-BE1A-B6AA26CFA860} = {0F88691D-AE22-4340-BE1A-B6AA26CFA860}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|AVR = Debug|AVR
+		Release|AVR = Release|AVR
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0B50CBDE-3AF7-4528-9F68-5F3EABC78E09}.Debug|AVR.ActiveCfg = Debug|AVR
+		{0B50CBDE-3AF7-4528-9F68-5F3EABC78E09}.Debug|AVR.Build.0 = Debug|AVR
+		{0B50CBDE-3AF7-4528-9F68-5F3EABC78E09}.Release|AVR.ActiveCfg = Release|AVR
+		{0B50CBDE-3AF7-4528-9F68-5F3EABC78E09}.Release|AVR.Build.0 = Release|AVR
+		{0F88691D-AE22-4340-BE1A-B6AA26CFA860}.Debug|AVR.ActiveCfg = Debug|AVR
+		{0F88691D-AE22-4340-BE1A-B6AA26CFA860}.Debug|AVR.Build.0 = Debug|AVR
+		{0F88691D-AE22-4340-BE1A-B6AA26CFA860}.Release|AVR.ActiveCfg = Release|AVR
+		{0F88691D-AE22-4340-BE1A-B6AA26CFA860}.Release|AVR.Build.0 = Release|AVR
+		{27AEB0C7-718F-4CFE-9612-76288019BD29}.Debug|AVR.ActiveCfg = Debug|AVR
+		{27AEB0C7-718F-4CFE-9612-76288019BD29}.Debug|AVR.Build.0 = Debug|AVR
+		{27AEB0C7-718F-4CFE-9612-76288019BD29}.Release|AVR.ActiveCfg = Release|AVR
+		{27AEB0C7-718F-4CFE-9612-76288019BD29}.Release|AVR.Build.0 = Release|AVR
+		{F9354CEE-0A1F-4439-AEA5-65764818B549}.Debug|AVR.ActiveCfg = Debug|AVR
+		{F9354CEE-0A1F-4439-AEA5-65764818B549}.Debug|AVR.Build.0 = Debug|AVR
+		{F9354CEE-0A1F-4439-AEA5-65764818B549}.Release|AVR.ActiveCfg = Release|AVR
+		{F9354CEE-0A1F-4439-AEA5-65764818B549}.Release|AVR.Build.0 = Release|AVR
+		{BD000613-B9FB-4F54-81DF-7A3F4E804AAA}.Debug|AVR.ActiveCfg = Debug|AVR
+		{BD000613-B9FB-4F54-81DF-7A3F4E804AAA}.Debug|AVR.Build.0 = Debug|AVR
+		{BD000613-B9FB-4F54-81DF-7A3F4E804AAA}.Release|AVR.ActiveCfg = Release|AVR
+		{BD000613-B9FB-4F54-81DF-7A3F4E804AAA}.Release|AVR.Build.0 = Release|AVR
+		{956947BF-1C77-47E0-81CF-72DA727485F4}.Debug|AVR.ActiveCfg = Debug|AVR
+		{956947BF-1C77-47E0-81CF-72DA727485F4}.Debug|AVR.Build.0 = Debug|AVR
+		{956947BF-1C77-47E0-81CF-72DA727485F4}.Release|AVR.ActiveCfg = Release|AVR
+		{956947BF-1C77-47E0-81CF-72DA727485F4}.Release|AVR.Build.0 = Release|AVR
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
