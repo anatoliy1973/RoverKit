@@ -70,10 +70,10 @@
       <Value>C:/Program Files/Visual Micro/Visual Micro for Arduino/Micro Platforms/default/debuggers</Value>
       <Value>C:/Program Files/Arduino/hardware/arduino/libraries</Value>
       <Value>C:/Program Files/Arduino/libraries</Value>
-      <Value>D:/Projects/libraries/Platform/utility</Value>
-      <Value>D:/Projects/libraries/Platform</Value>
-      <Value>D:/Projects/libraries/Electric/utility</Value>
-      <Value>D:/Projects/libraries/Electric</Value>
+      <Value>C:/Program Files/Arduino/libraries/Platform/utility</Value>
+      <Value>C:/Program Files/Arduino/libraries/Platform</Value>
+      <Value>C:/Program Files/Arduino/libraries/Electric/utility</Value>
+      <Value>C:/Program Files/Arduino/libraries/Electric</Value>
       <Value>../../RoverTest</Value>
       <Value>C:/Program Files/Arduino/hardware/arduino/variants/eightanaloginputs</Value>
       <Value>C:/Program Files/Arduino/hardware/arduino/cores/arduino</Value>
@@ -106,10 +106,10 @@
       <Value>C:/Program Files/Visual Micro/Visual Micro for Arduino/Micro Platforms/default/debuggers</Value>
       <Value>C:/Program Files/Arduino/hardware/arduino/libraries</Value>
       <Value>C:/Program Files/Arduino/libraries</Value>
-      <Value>D:/Projects/libraries/Platform/utility</Value>
-      <Value>D:/Projects/libraries/Platform</Value>
-      <Value>D:/Projects/libraries/Electric/utility</Value>
-      <Value>D:/Projects/libraries/Electric</Value>
+      <Value>C:/Program Files/Arduino/libraries/Platform/utility</Value>
+      <Value>C:/Program Files/Arduino/libraries/Platform</Value>
+      <Value>C:/Program Files/Arduino/libraries/Electric/utility</Value>
+      <Value>C:/Program Files/Arduino/libraries/Electric</Value>
       <Value>../../RoverTest</Value>
       <Value>C:/Program Files/Arduino/hardware/arduino/variants/eightanaloginputs</Value>
       <Value>C:/Program Files/Arduino/hardware/arduino/cores/arduino</Value>
@@ -226,10 +226,10 @@ build.arch=AVR
       <Value>C:/Program Files/Visual Micro/Visual Micro for Arduino/Micro Platforms/default/debuggers</Value>
       <Value>C:/Program Files/Arduino/hardware/arduino/libraries</Value>
       <Value>C:/Program Files/Arduino/libraries</Value>
-      <Value>D:/Projects/libraries/Platform/utility</Value>
-      <Value>D:/Projects/libraries/Platform</Value>
-      <Value>D:/Projects/libraries/Electric/utility</Value>
-      <Value>D:/Projects/libraries/Electric</Value>
+      <Value>C:/Program Files/Arduino/libraries/Platform/utility</Value>
+      <Value>C:/Program Files/Arduino/libraries/Platform</Value>
+      <Value>C:/Program Files/Arduino/libraries/Electric/utility</Value>
+      <Value>C:/Program Files/Arduino/libraries/Electric</Value>
       <Value>../../RoverTest</Value>
       <Value>C:/Program Files/Arduino/hardware/arduino/variants/eightanaloginputs</Value>
       <Value>C:/Program Files/Arduino/hardware/arduino/cores/arduino</Value>
@@ -262,10 +262,10 @@ build.arch=AVR
       <Value>C:/Program Files/Visual Micro/Visual Micro for Arduino/Micro Platforms/default/debuggers</Value>
       <Value>C:/Program Files/Arduino/hardware/arduino/libraries</Value>
       <Value>C:/Program Files/Arduino/libraries</Value>
-      <Value>D:/Projects/libraries/Platform/utility</Value>
-      <Value>D:/Projects/libraries/Platform</Value>
-      <Value>D:/Projects/libraries/Electric/utility</Value>
-      <Value>D:/Projects/libraries/Electric</Value>
+      <Value>C:/Program Files/Arduino/libraries/Platform/utility</Value>
+      <Value>C:/Program Files/Arduino/libraries/Platform</Value>
+      <Value>C:/Program Files/Arduino/libraries/Electric/utility</Value>
+      <Value>C:/Program Files/Arduino/libraries/Electric</Value>
       <Value>../../RoverTest</Value>
       <Value>C:/Program Files/Arduino/hardware/arduino/variants/eightanaloginputs</Value>
       <Value>C:/Program Files/Arduino/hardware/arduino/cores/arduino</Value>
