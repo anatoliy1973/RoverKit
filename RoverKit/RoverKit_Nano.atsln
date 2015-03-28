@@ -1,12 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Atmel Studio Solution File, Format Version 11.00
-Project("{E66E83B9-2572-4076-B26E-6BE79FF3018A}") = "RoverTest", "..\..\RoverTest\RoverTest.cppproj", "{0B50CBDE-3AF7-4528-9F68-5F3EABC78E09}"
-	ProjectSection(ProjectDependencies) = postProject
-		{0F88691D-AE22-4340-BE1A-B6AA26CFA860} = {0F88691D-AE22-4340-BE1A-B6AA26CFA860}
-		{27AEB0C7-718F-4CFE-9612-76288019BD29} = {27AEB0C7-718F-4CFE-9612-76288019BD29}
-	EndProjectSection
-EndProject
 Project("{E66E83B9-2572-4076-B26E-6BE79FF3018A}") = "Platform", "..\Platform\Platform.cppproj", "{0F88691D-AE22-4340-BE1A-B6AA26CFA860}"
 EndProject
 Project("{E66E83B9-2572-4076-B26E-6BE79FF3018A}") = "Electric", "..\Electric\Electric.cppproj", "{27AEB0C7-718F-4CFE-9612-76288019BD29}"
@@ -29,16 +23,14 @@ Project("{E66E83B9-2572-4076-B26E-6BE79FF3018A}") = "RealTimeClock", "..\RealTim
 		{0F88691D-AE22-4340-BE1A-B6AA26CFA860} = {0F88691D-AE22-4340-BE1A-B6AA26CFA860}
 	EndProjectSection
 EndProject
+Project("{E66E83B9-2572-4076-B26E-6BE79FF3018A}") = "RoverTest", "..\RoverTest\RoverTest.cppproj", "{0B50CBDE-3AF7-4528-9F68-5F3EABC78E09}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|AVR = Debug|AVR
 		Release|AVR = Release|AVR
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{0B50CBDE-3AF7-4528-9F68-5F3EABC78E09}.Debug|AVR.ActiveCfg = Debug|AVR
-		{0B50CBDE-3AF7-4528-9F68-5F3EABC78E09}.Debug|AVR.Build.0 = Debug|AVR
-		{0B50CBDE-3AF7-4528-9F68-5F3EABC78E09}.Release|AVR.ActiveCfg = Release|AVR
-		{0B50CBDE-3AF7-4528-9F68-5F3EABC78E09}.Release|AVR.Build.0 = Release|AVR
 		{0F88691D-AE22-4340-BE1A-B6AA26CFA860}.Debug|AVR.ActiveCfg = Debug|AVR
 		{0F88691D-AE22-4340-BE1A-B6AA26CFA860}.Debug|AVR.Build.0 = Debug|AVR
 		{0F88691D-AE22-4340-BE1A-B6AA26CFA860}.Release|AVR.ActiveCfg = Release|AVR
@@ -59,6 +51,10 @@ Global
 		{956947BF-1C77-47E0-81CF-72DA727485F4}.Debug|AVR.Build.0 = Debug|AVR
 		{956947BF-1C77-47E0-81CF-72DA727485F4}.Release|AVR.ActiveCfg = Release|AVR
 		{956947BF-1C77-47E0-81CF-72DA727485F4}.Release|AVR.Build.0 = Release|AVR
+		{0B50CBDE-3AF7-4528-9F68-5F3EABC78E09}.Debug|AVR.ActiveCfg = Debug|AVR
+		{0B50CBDE-3AF7-4528-9F68-5F3EABC78E09}.Debug|AVR.Build.0 = Debug|AVR
+		{0B50CBDE-3AF7-4528-9F68-5F3EABC78E09}.Release|AVR.ActiveCfg = Release|AVR
+		{0B50CBDE-3AF7-4528-9F68-5F3EABC78E09}.Release|AVR.Build.0 = Release|AVR
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
