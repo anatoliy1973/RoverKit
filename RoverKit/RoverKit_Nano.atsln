@@ -20,7 +20,7 @@ Project("{E66E83B9-2572-4076-B26E-6BE79FF3018A}") = "Navigation", "..\Navigation
 EndProject
 Project("{E66E83B9-2572-4076-B26E-6BE79FF3018A}") = "RealTimeClock", "..\RealTimeClock\RealTimeClock.cppproj", "{956947BF-1C77-47E0-81CF-72DA727485F4}"
 	ProjectSection(ProjectDependencies) = postProject
-		{0F88691D-AE22-4340-BE1A-B6AA26CFA860} = {0F88691D-AE22-4340-BE1A-B6AA26CFA860}
+		{F9354CEE-0A1F-4439-AEA5-65764818B549} = {F9354CEE-0A1F-4439-AEA5-65764818B549}
 	EndProjectSection
 EndProject
 Project("{E66E83B9-2572-4076-B26E-6BE79FF3018A}") = "RoverTest", "..\RoverTest\RoverTest.cppproj", "{0B50CBDE-3AF7-4528-9F68-5F3EABC78E09}"

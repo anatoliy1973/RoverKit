@@ -10,6 +10,7 @@
 #define THREEWIRE_H_
 
 #include "MultiPlatform.h"
+#include <inttypes.h>
 
 //////////////////////////////////////////////////////////////////////////
 // Provides communication with devices those use 3 wire interface
@@ -17,17 +18,23 @@
 class ThreeWire
 {
 private:
-	unsigned char m_dataPin;
-	unsigned char m_cePin;
-	unsigned char m_clkPin;
+	uint8_t m_dataPin;
+	uint8_t m_cePin;
+	uint8_t m_clkPin;
 	int m_delay;
 	
 public:
 	// Initializes a new instance of the ThreeWire class
-	ThreeWire(unsigned char dataPin, unsigned char cePin, unsigned char m_clkPin, int del);
+	ThreeWire(uint8_t dataPin, uint8_t cePin, uint8_t m_clkPin, int del);
 	
-	void Write(unsigned char data);
-	unsigned char Read();
+	// A helper function to setup the start condition.
+    void BeginReading();
+    // A helper function to finish the communication.
+	void EndReading();
+    // A helper function for writing a byte with bit toggle
+	void Write(uint8_t data);
+	// A helper function for reading a byte with bit toggle
+    uint8_t Read();
 	
 private:
     void SerialClock();

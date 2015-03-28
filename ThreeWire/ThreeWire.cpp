@@ -7,7 +7,7 @@
 
 #include "ThreeWire.h"
 
-ThreeWire::ThreeWire(unsigned char dataPin, unsigned char cePin, unsigned char clkPin, int del)
+ThreeWire::ThreeWire(uint8_t dataPin, uint8_t cePin, uint8_t clkPin, int del)
 {
 	this->m_dataPin = dataPin;
 	this->m_cePin = cePin;
@@ -20,7 +20,37 @@ ThreeWire::ThreeWire(unsigned char dataPin, unsigned char cePin, unsigned char c
 	digitalWrite(this->m_cePin, LOW);
 }
 
-void ThreeWire::Write(unsigned char data)
+// A helper function to setup the start condition.
+//
+// An 'init' function is not used.
+// But now the pinMode is set every time.
+// That's not a big deal, and it's valid.
+// At startup, the pins of the Arduino are high impedance.
+// Since the DS1302 has pull-down resistors,
+// the signals are low (inactive) until the DS1302 is used.
+void ThreeWire::BeginReading()
+{
+    digitalWrite(this->m_cePin, LOW); // default, not enabled
+    pinMode(this->m_cePin, OUTPUT);
+
+    digitalWrite(this->m_clkPin, LOW); // default, clock low
+    pinMode(this->m_clkPin, OUTPUT);
+
+    pinMode(this->m_dataPin, OUTPUT);
+
+    digitalWrite(this->m_cePin, HIGH); // start the session
+    delayMicroseconds(this->m_delay);	
+}
+
+void ThreeWire::EndReading()
+{
+    // Set CE low
+    digitalWrite(this->m_cePin, LOW);
+
+    delayMicroseconds(this->m_delay);
+}
+
+void ThreeWire::Write(uint8_t data)
 {
     for (int i = 0; i < 8; i++)
     {
@@ -31,20 +61,24 @@ void ThreeWire::Write(unsigned char data)
     }
 }
 
-unsigned char ThreeWire::Read()
+// A helper function for reading a byte with bit toggle
+//
+// This function assumes that the SCLK is still low.
+//
+uint8_t ThreeWire::Read()
 {
-	unsigned char value = 0;
+	uint8_t result = 0;
 	
 	pinMode(this->m_dataPin, INPUT);
 	
 	for (int i = 0; i < 8; i++)
 	{
-		bitWrite(value, i, digitalRead(this->m_dataPin));
+		bitWrite(result, i, digitalRead(this->m_dataPin));
 		
 		this->SerialClock();
 	}
 	
-	return value;
+	return result;
 }
 
 void ThreeWire::SerialClock()
