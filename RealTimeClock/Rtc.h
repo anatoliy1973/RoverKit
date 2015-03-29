@@ -29,8 +29,9 @@ public:
     long get_Millis();
 	
 protected:
+    // Read the current time from the RTC and return it in a TTime structure.
 	virtual bool ReadTime(TTime& time)=0;
-    // Set the RTC's time from a tmElements_t structure.
+    // Set the RTC's time from a TTime structure.
     virtual bool WriteTime(TTime&)=0;
 
 private:

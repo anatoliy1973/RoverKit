@@ -48,6 +48,7 @@ public:
 	DS1302Rtc(uint8_t dataPin, uint8_t cePin, uint8_t clkPin);
 	~DS1302Rtc();
 protected:
+    // Read the current time from the RTC and return it in a TTime structure.
     virtual bool ReadTime(TTime& time);
     // Set the RTC's time from a TTime structure.
     virtual bool WriteTime(TTime& time);

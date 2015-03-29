@@ -22,6 +22,8 @@ DS1302Rtc::~DS1302Rtc()
 	delete this->m_channel;
 } //~DS1302Rtc
 
+// Read the current time from the RTC and return it in a TTime structure.
+// Returns the bus status (true if successful).
 bool DS1302Rtc::ReadTime(TTime& time)
 {
     uint8_t buff[8];
