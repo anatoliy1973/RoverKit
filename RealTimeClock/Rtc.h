@@ -19,14 +19,14 @@ private:
     uint32_t m_lastMicros;
 	uint32_t m_threashold;
 	TTime m_time;
-    int m_correction;
+    uint16_t m_correction;
 
 //functions
 public:
 	Rtc(uint32_t threashold);
 	TTime get_Time();
     void set_Time(TTime& time);
-    long get_Millis();
+    uint32_t get_Millis();
 	
 protected:
     // Read the current time from the RTC and return it in a TTime structure.

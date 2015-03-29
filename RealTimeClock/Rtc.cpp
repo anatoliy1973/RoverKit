@@ -14,7 +14,7 @@ Rtc::Rtc(uint32_t threashold)
 {
 	this->m_threashold = threashold;
 	this->m_lastMicros = 0;
-    this->m_correction = 1000 - (millis() % 1000);
+    this->m_correction = (uint16_t)(1000UL - (millis() % 1000UL));
 }
 
 
@@ -50,9 +50,9 @@ void Rtc::set_Time(TTime& time)
     }
 }
 
-long Rtc::get_Millis()
+uint32_t Rtc::get_Millis()
 {
-	return (millis() + this->m_correction) % 1000;
+	return (millis() + this->m_correction) % 1000UL;
 }
 
 void Rtc::UpdateTime(uint32_t currentMicros)
