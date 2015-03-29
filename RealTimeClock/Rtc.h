@@ -19,11 +19,14 @@ private:
     uint32_t m_lastMicros;
 	uint32_t m_threashold;
 	TTime m_time;
+    int m_correction;
 
 //functions
 public:
 	Rtc(uint32_t threashold);
 	TTime get_Time();
+    void set_Time(TTime& time);
+    long get_Millis();
 	
 protected:
 	virtual bool ReadTime(TTime& time)=0;
