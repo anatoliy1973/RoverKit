@@ -26,7 +26,9 @@ public:
 	TTime get_Time();
 	
 protected:
-	virtual void Update(TTime&)=0;
+	virtual bool ReadTime(TTime& time)=0;
+    // Set the RTC's time from a tmElements_t structure.
+    virtual bool WriteTime(TTime&)=0;
 
 private:
     void UpdateTime(uint32_t currentMicros);

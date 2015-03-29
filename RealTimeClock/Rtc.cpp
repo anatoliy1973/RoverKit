@@ -44,6 +44,6 @@ TTime Rtc::get_Time()
 void Rtc::UpdateTime(uint32_t currentMicros)
 {
 	this->m_lastMicros = currentMicros;
-	this->Update(this->m_time);
+	this->ReadTime(this->m_time);
 }
 
