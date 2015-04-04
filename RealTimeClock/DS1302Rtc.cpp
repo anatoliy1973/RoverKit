@@ -5,9 +5,7 @@
 * Author: Tolik
 */
 
-
 #include "DS1302Rtc.h"
-#include "Arithmetic.h"
 
 #define DS1302_DATA_ACCESS_DELAY 4
 
@@ -15,12 +13,6 @@ DS1302Rtc::DS1302Rtc(uint8_t dataPin, uint8_t cePin, uint8_t clkPin) : Rtc(DS130
 {
 	this->m_channel = new ThreeWire(dataPin, cePin, clkPin, DS1302_DATA_ACCESS_DELAY);
 }
-
-// default destructor
-DS1302Rtc::~DS1302Rtc()
-{
-	delete this->m_channel;
-} //~DS1302Rtc
 
 // Read the current time from the RTC and return it in a TTime structure.
 // Returns the bus status (true if successful).

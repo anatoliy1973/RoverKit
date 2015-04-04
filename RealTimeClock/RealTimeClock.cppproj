@@ -100,9 +100,10 @@
   </avrgcc.compiler.symbols.DefSymbols>
   <avrgcc.compiler.directories.IncludePaths>
     <ListValues>
-      <Value>C:\Program Files\Arduino\libraries\Platform</Value>
+      <Value>C:\Program Files\Arduino\libraries</Value>
       <Value>C:\Program Files\Arduino\hardware\arduino\cores\arduino</Value>
       <Value>C:\Program Files\Arduino\hardware\arduino\variants\eightanaloginputs</Value>
+      <Value>C:\Program Files\Arduino\hardware\tools\avr\avr\include\</Value>
     </ListValues>
   </avrgcc.compiler.directories.IncludePaths>
   <avrgcc.compiler.optimization.level>Optimize (-O1)</avrgcc.compiler.optimization.level>
@@ -124,9 +125,9 @@
   <avrgcccpp.compiler.directories.IncludePaths>
     <ListValues>
       <Value>C:\Program Files\Arduino\libraries</Value>
-      <Value>C:\Program Files\Arduino\libraries\Platform</Value>
       <Value>C:\Program Files\Arduino\hardware\arduino\cores\arduino</Value>
       <Value>C:\Program Files\Arduino\hardware\arduino\variants\eightanaloginputs</Value>
+      <Value>C:\Program Files\Arduino\hardware\tools\avr\avr\include\</Value>
     </ListValues>
   </avrgcccpp.compiler.directories.IncludePaths>
   <avrgcccpp.compiler.optimization.level>Optimize (-O1)</avrgcccpp.compiler.optimization.level>

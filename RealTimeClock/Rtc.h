@@ -9,9 +9,8 @@
 #ifndef __RTC_H__
 #define __RTC_H__
 
-#include "MultiPlatform.h"
+#include "Platform\MultiPlatform.h"
 #include "TimeTypes.h"
-#include <stdint-gcc.h>
 
 class Rtc
 {
@@ -24,6 +23,7 @@ private:
 //functions
 public:
 	Rtc(uint32_t threashold);
+
 	TTime get_Time();
     void set_Time(TTime& time);
     uint32_t get_Millis();

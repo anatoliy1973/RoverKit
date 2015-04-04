@@ -5,8 +5,8 @@
 * Author: Tolik
 */
 
-#include "MultiPlatform.h"
-#include "Arithmetic.h"
+#include "Platform\MultiPlatform.h"
+#include "Platform\Arithmetic.h"
 
 #ifndef __LONGVECTOR_H__
 #define __LONGVECTOR_H__

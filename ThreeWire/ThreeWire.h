@@ -9,7 +9,7 @@
 #ifndef THREEWIRE_H_
 #define THREEWIRE_H_
 
-#include "MultiPlatform.h"
+#include "Platform\MultiPlatform.h"
 #include <inttypes.h>
 
 //////////////////////////////////////////////////////////////////////////

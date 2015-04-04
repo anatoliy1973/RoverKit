@@ -9,8 +9,9 @@
 #ifndef __DS1302RTC_H__
 #define __DS1302RTC_H__
 
-#include "Rtc.h"
+#include "Platform\Arithmetic.h"
 #include "ThreeWire\ThreeWire.h"
+#include "Rtc.h"
 
 // Defines for the bits, to be able to change
 // between bit number and binary definition.
@@ -46,7 +47,7 @@ private:
 //functions
 public:
 	DS1302Rtc(uint8_t dataPin, uint8_t cePin, uint8_t clkPin);
-	~DS1302Rtc();
+
 protected:
     // Read the current time from the RTC and return it in a TTime structure.
     virtual bool ReadTime(TTime& time);
