@@ -7,11 +7,14 @@
 
 #include "Platform\MultiPlatform.h"
 #include "Electric\SimpleMotorDriver.h"
-#include "RealTimeClock\DS1302Rtc.h"
+#include "RealTimeClock\TimeTypes.h"
+//#include "RealTimeClock\DS1302Rtc.h"
+
+using namespace RealTimeClock;
 
 SimpleMotorDriver *leftMotor = new SimpleMotorDriver(2, 4, 6);
 SimpleMotorDriver *rigthMotor = new SimpleMotorDriver(7, 8, 9);
-Rtc *rtc = new DS1302Rtc(A6, A5, A7);
+//DS1302Rtc *rtc = new DS1302Rtc(A6, A5, A7);
 char isoDate[20] = "0123456789012345678";
 
 void setup()

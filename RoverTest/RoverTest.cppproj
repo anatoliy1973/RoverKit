@@ -66,7 +66,6 @@
       <Value>c:/program files/arduino/hardware/tools/avr/avr/</Value>
       <Value>c:/program files/arduino/hardware/tools/avr/avr/include/avr/</Value>
       <Value>c:/program files/arduino/hardware/tools/avr/avr/include/</Value>
-      <Value>D:/Projects/libraries</Value>
       <Value>C:/Program Files/Visual Micro/Visual Micro for Arduino/Micro Platforms/default/debuggers</Value>
       <Value>C:/Program Files/Arduino/hardware/arduino/libraries</Value>
       <Value>C:/Program Files/Arduino/libraries</Value>
@@ -104,7 +103,6 @@
       <Value>c:/program files/arduino/hardware/tools/avr/avr/</Value>
       <Value>c:/program files/arduino/hardware/tools/avr/avr/include/avr/</Value>
       <Value>c:/program files/arduino/hardware/tools/avr/avr/include/</Value>
-      <Value>D:/Projects/libraries</Value>
       <Value>C:/Program Files/Visual Micro/Visual Micro for Arduino/Micro Platforms/default/debuggers</Value>
       <Value>C:/Program Files/Arduino/hardware/arduino/libraries</Value>
       <Value>C:/Program Files/Arduino/libraries</Value>
@@ -226,7 +224,6 @@ build.arch=AVR
       <Value>c:/program files/arduino/hardware/tools/avr/avr/</Value>
       <Value>c:/program files/arduino/hardware/tools/avr/avr/include/avr/</Value>
       <Value>c:/program files/arduino/hardware/tools/avr/avr/include/</Value>
-      <Value>D:/Projects/libraries</Value>
       <Value>C:/Program Files/Visual Micro/Visual Micro for Arduino/Micro Platforms/default/debuggers</Value>
       <Value>C:/Program Files/Arduino/hardware/arduino/libraries</Value>
       <Value>C:/Program Files/Arduino/libraries</Value>
@@ -264,7 +261,6 @@ build.arch=AVR
       <Value>c:/program files/arduino/hardware/tools/avr/avr/</Value>
       <Value>c:/program files/arduino/hardware/tools/avr/avr/include/avr/</Value>
       <Value>c:/program files/arduino/hardware/tools/avr/avr/include/</Value>
-      <Value>D:/Projects/libraries</Value>
       <Value>C:/Program Files/Visual Micro/Visual Micro for Arduino/Micro Platforms/default/debuggers</Value>
       <Value>C:/Program Files/Arduino/hardware/arduino/libraries</Value>
       <Value>C:/Program Files/Arduino/libraries</Value>
