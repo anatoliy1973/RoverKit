@@ -11,18 +11,4 @@
 namespace ExtIO
 {
 
-    // functions
-    void Extender::Method2()//virtual
-    {
-    }
-
-    void Extender::Method3()
-    {
-    }
-
-    // virtual destructor
-    Extender::~Extender()
-    {
-    } //~Extender
-
 }

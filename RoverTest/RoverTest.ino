@@ -6,6 +6,7 @@
  */ 
 
 #include "Platform\MultiPlatform.h"
+#include <SPI\SPI.h>
 #include "Electric\SimpleMotorDriver.h"
 #include <DS1302RTC.h>
 #include <Time.h>                         //http://playground.arduino.cc/Code/Time
