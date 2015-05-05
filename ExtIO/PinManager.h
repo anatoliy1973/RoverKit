@@ -16,32 +16,27 @@
 namespace ExtIO
 {
 
+    //////////////////////////////////////////////////////////////////////////
+    // Provides the way to increase a number IN/OUT pins
+    //////////////////////////////////////////////////////////////////////////
     class PinManagerClass
     {
-        //variables
-        private:
-            uint8_t m_startExtPin;
-            Extender** m_extenders;
-            uint8_t m_extendersCount;
-
         //functions
         public:
-            PinManagerClass();
-
-            // Initializes an instance of PinManager
-            void Init(uint8_t startExtPin, Extender** extenders, uint8_t extendersCount);
+            // Initializes PinManager
+            //  startExtPin: indicates a number of first extension pin
+            //  extenders: an array of hardware extenders
+            //  extendersCount: indicates a number of hardware extenders (up to 8)
+            static void Init(uint8_t startExtPin, Extender** extenders, uint8_t extendersCount);
             // Sets a mode of the indicated pin (1-based) if possible
-            void PinMode(uint8_t pin, uint8_t mode);
+            static void PinMode(uint8_t pin, uint8_t mode);
             // Returns an electric level on the indicated pin
-            uint8_t DigitalRead(uint8_t pin);
+            static uint8_t DigitalRead(uint8_t pin);
             // Sets an electric level on the indicated pin
-            void DigitalWrite(uint8_t pin, uint8_t val);
+            static void DigitalWrite(uint8_t pin, uint8_t val);
 
         private:
-            PinManagerClass(const PinManagerClass &c);
-            PinManagerClass& operator=(const PinManagerClass &c);
-
-            bool FindExtender(uint8_t* pin, Extender* extender);
+            static bool FindExtender(uint8_t* pin, Extender* extender);
 
     }; //PinManagerClass
 

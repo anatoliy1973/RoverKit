@@ -6,16 +6,26 @@
  */ 
 
 #include "Platform\MultiPlatform.h"
-#include <SPI\SPI.h>
+#include "ExtIO\PinManager.h"
+#include "ExtIO\Extender.h"
+#include "ExtIO\Extender74HC595.h"
 #include "Electric\SimpleMotorDriver.h"
+
+#include <SPI\SPI.h>
 #include <DS1302RTC.h>
 #include <Time.h>                         //http://playground.arduino.cc/Code/Time
 
-// Set pins:  CE, IO,CLK
-DS1302RTC RTC(4, 3, 2);
+using namespace ExtIO;
+
+#define STARTING_EXT_PIN 36
+#define SS_EXTENDER 7
 // Optional connection for RTC module
 #define DS1302_GND_PIN 6
 #define DS1302_VCC_PIN 5
+
+// Set pins:  CE, IO,CLK
+DS1302RTC RTC(4, 3, 2);
+Extender74HC595 *outputExtender = new Extender74HC595(1, SS_EXTENDER);
 
 /*SimpleMotorDriver *leftMotor = new SimpleMotorDriver(2, 4, 6);
 SimpleMotorDriver *rigthMotor = new SimpleMotorDriver(7, 8, 9);*/
@@ -23,6 +33,10 @@ SimpleMotorDriver *rigthMotor = new SimpleMotorDriver(7, 8, 9);*/
 void setup()
 {
     Serial.begin(115200);
+    Extender** extenders = new Extender*[1];
+    extenders[0] = (Extender*)outputExtender;
+
+    PinManager.Init(STARTING_EXT_PIN, extenders, 1);
 
     // Activate RTC module
     digitalWrite(DS1302_GND_PIN, LOW);

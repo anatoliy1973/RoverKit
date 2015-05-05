@@ -12,22 +12,22 @@
 namespace ExtIO
 {
 
-    // default constructor
-    PinManagerClass::PinManagerClass()
-    {
-    } //PinManager
+    //variables
+    static uint8_t m_startExtPin;
+    static Extender** m_extenders;
+    static uint8_t m_extendersCount;
 
     void PinManagerClass::Init(uint8_t startExtPin, Extender** extenders, uint8_t extendersCount)
     {
-        this->m_startExtPin = startExtPin;
-        this->m_extenders = extenders;
-        this->m_extendersCount = extendersCount;
+        m_startExtPin = startExtPin;
+        m_extenders = extenders;
+        m_extendersCount = extendersCount;
     }
 
     void PinManagerClass::PinMode(uint8_t pin, uint8_t mode)
     {
         Extender* extender = NULL;
-        if (this->FindExtender(&pin, extender))
+        if (FindExtender(&pin, extender))
         {
             if (pin > B00)
             {
@@ -43,7 +43,7 @@ namespace ExtIO
     uint8_t PinManagerClass::DigitalRead(uint8_t pin)
     {
         Extender* extender = NULL;
-        if (this->FindExtender(&pin, extender))
+        if (FindExtender(&pin, extender))
         {
             if (pin > B00)
             {
@@ -61,7 +61,7 @@ namespace ExtIO
     void PinManagerClass::DigitalWrite(uint8_t pin, uint8_t val)
     {
         Extender* extender = NULL;
-        if (this->FindExtender(&pin, extender))
+        if (FindExtender(&pin, extender))
         {
             if (pin > B00)
             {
@@ -76,19 +76,19 @@ namespace ExtIO
 
     bool PinManagerClass::FindExtender(uint8_t* pin, Extender* extender)
     {
-        if (*pin < this->m_startExtPin)
+        if (*pin < m_startExtPin)
         {
             return false;
         }
 
-        *pin -= this->m_startExtPin - 1;
-        for (uint8_t i = 0; i < this->m_extendersCount; i++)
+        *pin -= m_startExtPin - 1;
+        for (uint8_t i = 0; i < m_extendersCount; i++)
         {
-            uint8_t extenderPins = this->m_extenders[i]->get_PinsCount();
+            uint8_t extenderPins = m_extenders[i]->get_PinsCount();
             *pin -= extenderPins;
             if (*pin <= extenderPins)
             {
-                extender = this->m_extenders[i];
+                extender = m_extenders[i];
                 break;
             }
         }
