@@ -14,12 +14,11 @@
 namespace ExtIO
 {
 
-    enum PinFLlags
+    enum PinFlags
     {
-        Input = 1,
-        Output = 2,
-        Analog = 4,
-        Pwm = 8
+        InputPin = 1,
+        OutputPin = 2,
+        InputOutputPin = 3
     };
 
     class Extender
@@ -28,8 +27,6 @@ namespace ExtIO
         public:
             // Gets a number of pins provided by the extender
             virtual uint8_t get_PinsCount()=0;
-            // Gets a flags indicating the pin possibilities
-            virtual PinFLlags get_PinFlags(uint8_t pin)=0;
 
             // Sets a mode of the indicated pin (1-based) if possible
             virtual void PinMode(uint8_t pin, uint8_t mode)=0;
@@ -39,6 +36,10 @@ namespace ExtIO
             void DigitalWrite(uint8_t pin, uint8_t val);
 
         protected:
+            // Gets a flags indicating the pin possibilities
+            virtual PinFlags get_PinFlags(uint8_t pin)=0;
+            // Flashes the data from/to the memory buffer
+            virtual void Flash();
             // Returns an electric level on the indicated pin
             virtual uint8_t DigitalReadInternal(uint8_t pin)=0;
             // Sets an electric level on the indicated pin

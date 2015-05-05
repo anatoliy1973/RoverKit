@@ -10,7 +10,7 @@
 #define __PINMANAGER_H__
 
 #include <inttypes.h>
-#include "MultiPlatform.h"
+#include "Platform/MultiPlatform.h"
 #include "Extender.h"
 
 namespace ExtIO
