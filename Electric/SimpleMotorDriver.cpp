@@ -7,40 +7,40 @@
 
 #include "SimpleMotorDriver.h"
 
-const unsigned char MaxPercent = 100;
+#define MAX_PERCENT 100
 
-SimpleMotorDriver::SimpleMotorDriver(unsigned char pin1, unsigned char pin2, unsigned char pwmPin)
+SimpleMotorDriver::SimpleMotorDriver(uint8_t pin1, uint8_t pin2, uint8_t pwmPin)
 {
     this->m_pin1 = pin1;
     this->m_pin2 = pin2;
     this->m_pwmPin = pwmPin;
     
-    pinMode(this->m_pin1, OUTPUT);
-    pinMode(this->m_pin2, OUTPUT);
-    pinMode(this->m_pwmPin, OUTPUT);
+    PinManager.PinMode(this->m_pin1, OUTPUT);
+    PinManager.PinMode(this->m_pin2, OUTPUT);
+    PinManager.PinMode(this->m_pwmPin, OUTPUT);
 } //SimpleMotorDriver
 
 void SimpleMotorDriver::SetThrottle(char speed)
 {
-	unsigned char pin1Value = speed > 0 ? HIGH : LOW;
-	unsigned char pin2Value = speed < 0 ? HIGH : LOW;
-	
-	this->WritePins(pin1Value, pin2Value, abs(speed));
+    uint8_t pin1Value = speed > 0 ? HIGH : LOW;
+    uint8_t pin2Value = speed < 0 ? HIGH : LOW;
+
+    this->WritePins(pin1Value, pin2Value, abs(speed));
 }
 
 void SimpleMotorDriver::SetBreak()
 {
-	this->WritePins(HIGH, HIGH, 0);
+    this->WritePins(HIGH, HIGH, 0);
 }
 
-void SimpleMotorDriver::WritePins(unsigned char pin1Value, unsigned char pin2Value, unsigned char pwmPinValue)
+void SimpleMotorDriver::WritePins(uint8_t pin1Value, uint8_t pin2Value, uint8_t pwmPinValue)
 {
-	if (pwmPinValue > MaxPercent)
-	{
-	    pwmPinValue = MaxPercent;	
-	}
-	
-	digitalWrite(this->m_pin1, pin1Value);
-	digitalWrite(this->m_pin2, pin2Value);
-	analogWrite(this->m_pwmPin, map(pwmPinValue, CHAR_MIN, MaxPercent, this->get_VoltageLowMapping(), this->get_VoltageHighMapping()));
+    if (pwmPinValue > MAX_PERCENT)
+    {
+        pwmPinValue = MAX_PERCENT;
+    }
+
+    PinManager.DigitalWrite(this->m_pin1, pin1Value);
+    PinManager.DigitalWrite(this->m_pin2, pin2Value);
+    analogWrite(this->m_pwmPin, map(pwmPinValue, CHAR_MIN, MAX_PERCENT, this->get_VoltageLowMapping(), this->get_VoltageHighMapping()));
 }

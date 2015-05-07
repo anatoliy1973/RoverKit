@@ -5,6 +5,7 @@ Project("{E66E83B9-2572-4076-B26E-6BE79FF3018A}") = "Platform", "..\Platform\Pla
 EndProject
 Project("{E66E83B9-2572-4076-B26E-6BE79FF3018A}") = "Electric", "..\Electric\Electric.cppproj", "{27AEB0C7-718F-4CFE-9612-76288019BD29}"
 	ProjectSection(ProjectDependencies) = postProject
+		{C9019017-B6E1-4D24-8762-80EEE901FA8A} = {C9019017-B6E1-4D24-8762-80EEE901FA8A}
 		{0F88691D-AE22-4340-BE1A-B6AA26CFA860} = {0F88691D-AE22-4340-BE1A-B6AA26CFA860}
 	EndProjectSection
 EndProject
@@ -21,6 +22,9 @@ Project("{E66E83B9-2572-4076-B26E-6BE79FF3018A}") = "RoverTest", "..\RoverTest\R
 	EndProjectSection
 EndProject
 Project("{E66E83B9-2572-4076-B26E-6BE79FF3018A}") = "ExtIO", "..\ExtIO\ExtIO.cppproj", "{C9019017-B6E1-4D24-8762-80EEE901FA8A}"
+	ProjectSection(ProjectDependencies) = postProject
+		{0F88691D-AE22-4340-BE1A-B6AA26CFA860} = {0F88691D-AE22-4340-BE1A-B6AA26CFA860}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

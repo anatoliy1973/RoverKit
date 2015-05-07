@@ -5,8 +5,12 @@
 * Author: Default
 */
 
+#include <inttypes.h>
 #include <limits.h>
 #include "MotorDriverBase.h"
+#include "ExtIO/PinManager.h"
+
+using namespace ExtIO;
 
 #ifndef __SIMPLEMOTORDRIVER_H__
 #define __SIMPLEMOTORDRIVER_H__
@@ -14,28 +18,24 @@
 // Provides a simple motor controller driver like Toshiba TB6612FNG
 class SimpleMotorDriver : public MotorDriverBase
 {
-//variables
-private:
-    unsigned char m_pin1;
-    unsigned char m_pin2;
-    unsigned char m_pwmPin;
+    //variables
+    private:
+        uint8_t m_pin1;
+        uint8_t m_pin2;
+        uint8_t m_pwmPin;
 
-//functions
-public:
-	// Creates a new instance of the SimpleMotorDriver class.
-    SimpleMotorDriver(unsigned char pin1, unsigned char pin2, unsigned char pwmPin);
+    //functions
+    public:
+        // Creates a new instance of the SimpleMotorDriver class.
+        SimpleMotorDriver(uint8_t pin1, uint8_t pin2, uint8_t pwmPin);
 
-private:
-	SimpleMotorDriver( const SimpleMotorDriver &c );
-	SimpleMotorDriver& operator=( const SimpleMotorDriver &c );
+    private:
+        // Sets the motor power in percents
+        virtual void SetThrottle(char speed);
+        // Sets the motor to break mode
+        virtual void SetBreak();
 
-    
-    // Sets the motor power in percents
-    virtual void SetThrottle(char speed);
-    // Sets the motor to break mode
-    virtual void SetBreak();
-
-    void WritePins(unsigned char pin1Value, unsigned char pin2Value, unsigned char pwmPinValue);
+        void WritePins(uint8_t pin1Value, uint8_t pin2Value, uint8_t pwmPinValue);
 }; //SimpleMotorDriver
 
 #endif //__SIMPLEMOTORDRIVER_H__

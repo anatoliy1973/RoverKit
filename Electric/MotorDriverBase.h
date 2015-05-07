@@ -9,7 +9,7 @@
 #ifndef __MOTORDRIVERBASE_H__
 #define __MOTORDRIVERBASE_H__
 
-#include "MultiPlatform.h"
+#include "Platform\MultiPlatform.h"
 
 // Provides an interface handling a motor
 class MotorDriverBase

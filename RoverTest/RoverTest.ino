@@ -18,7 +18,7 @@
 using namespace ExtIO;
 
 #define STARTING_EXT_PIN 36
-#define SS_EXTENDER 9
+#define SS_EXTENDER 7
 // Optional connection for RTC module
 #define DS1302_GND_PIN 37
 #define DS1302_VCC_PIN 36
@@ -27,8 +27,8 @@ using namespace ExtIO;
 DS1302RTC RTC(38, 8, 39);
 Extender *outputExtender = new Extender74HC595(1, SS_EXTENDER);
 
-/*SimpleMotorDriver *leftMotor = new SimpleMotorDriver(2, 4, 6);
-SimpleMotorDriver *rigthMotor = new SimpleMotorDriver(7, 8, 9);*/
+SimpleMotorDriver *leftMotor = NULL;
+SimpleMotorDriver *rigthMotor = NULL;
 
 void setup()
 {
@@ -66,8 +66,11 @@ void setup()
         Serial.println(" FAIL!");
     }
 
-    /*leftMotor->Break();
-    rigthMotor->Break();*/
+    leftMotor = new SimpleMotorDriver(42, 43, 9);
+    rigthMotor = new SimpleMotorDriver(41, 40, 10);
+
+    leftMotor->Break();
+    rigthMotor->Break();
 }
 
 void loop()
