@@ -11,8 +11,6 @@
 
 #include <inttypes.h>
 
-long Multiply(long x, long y);
-
 // Convert Decimal to Binary Coded Decimal (BCD)
 uint8_t Dec2Bcd(uint8_t num);
 

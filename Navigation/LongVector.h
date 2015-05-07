@@ -56,7 +56,7 @@ class LongVector
 
         friend LongVector* operator * (const LongVector& x, const LongVector& y)
         {
-            return new LongVector(Multiply(x.m_x, y.m_x), Multiply(x.m_y, y.m_y), Multiply(x.m_z, y.m_z));
+            return new LongVector(x.m_x * y.m_x, x.m_y * y.m_y, x.m_z * y.m_z);
         }
 
         friend LongVector* operator * (const LongVector& x, long y)
@@ -66,7 +66,8 @@ class LongVector
 
         friend LongVector* operator / (const LongVector& x, int y)
         {
-            return new LongVector(x.m_x / y, x.m_y / y, x.m_z / y);
+            int halfY = y / 2;
+            return new LongVector((x.m_x + halfY) / y, (x.m_y + halfY)/ y, (x.m_z + halfY)/ y);
         }
 
         friend long operator & (const LongVector& x, const LongVector& y)
@@ -82,6 +83,7 @@ class LongVector
                 (u.m_x * v.m_y) - (u.m_y * v.m_x));
         }
 
+        // Returns a normalized vector
         long operator ! ();
 
 }; //LongVector
