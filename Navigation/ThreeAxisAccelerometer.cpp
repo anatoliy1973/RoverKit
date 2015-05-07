@@ -12,8 +12,3 @@
 ThreeAxisAccelerometer::ThreeAxisAccelerometer()
 {
 } //ThreeAxisAccelerometer
-
-// default destructor
-ThreeAxisAccelerometer::~ThreeAxisAccelerometer()
-{
-} //~ThreeAxisAccelerometer

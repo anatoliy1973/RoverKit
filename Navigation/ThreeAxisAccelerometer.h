@@ -9,7 +9,7 @@
 #ifndef __THREEAXISACCELEROMETER_H__
 #define __THREEAXISACCELEROMETER_H__
 
-#include "MultiPlatform.h"
+#include "Platform/MultiPlatform.h"
 
 class ThreeAxisAccelerometer
 {
@@ -20,12 +20,10 @@ private:
 
 //functions
 public:
-	ThreeAxisAccelerometer();
-	~ThreeAxisAccelerometer();
+    ThreeAxisAccelerometer();
+
 protected:
 private:
-	ThreeAxisAccelerometer( const ThreeAxisAccelerometer &c );
-	ThreeAxisAccelerometer& operator=( const ThreeAxisAccelerometer &c );
 
 }; //ThreeAxisAccelerometer
 
