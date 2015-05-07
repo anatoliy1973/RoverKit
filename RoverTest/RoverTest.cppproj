@@ -77,6 +77,8 @@
       <Value>C:/Program Files/Arduino/libraries/SPI</Value>
       <Value>C:/Program Files/Arduino/libraries/Electric/utility</Value>
       <Value>C:/Program Files/Arduino/libraries/Electric</Value>
+      <Value>C:/Program Files/Arduino/libraries/ExtIO/utility</Value>
+      <Value>C:/Program Files/Arduino/libraries/ExtIO</Value>
       <Value>C:/Program Files/Arduino/libraries/Platform/utility</Value>
       <Value>C:/Program Files/Arduino/libraries/Platform</Value>
       <Value>../../RoverTest</Value>
@@ -118,6 +120,8 @@
       <Value>C:/Program Files/Arduino/libraries/SPI</Value>
       <Value>C:/Program Files/Arduino/libraries/Electric/utility</Value>
       <Value>C:/Program Files/Arduino/libraries/Electric</Value>
+      <Value>C:/Program Files/Arduino/libraries/ExtIO/utility</Value>
+      <Value>C:/Program Files/Arduino/libraries/ExtIO</Value>
       <Value>C:/Program Files/Arduino/libraries/Platform/utility</Value>
       <Value>C:/Program Files/Arduino/libraries/Platform</Value>
       <Value>../../RoverTest</Value>
@@ -137,7 +141,7 @@
   <avrgcccpp.assembler.debugging.DebugLevel>Default (-Wa,-g)</avrgcccpp.assembler.debugging.DebugLevel>
 </AvrGccCpp>
     </ToolchainSettings>
-    <VMSETTING_IncludePaths>C:/Program Files/Arduino/hardware/arduino/cores/arduino;C:/Program Files/Arduino/hardware/arduino/variants/eightanaloginputs;../../RoverTest;C:/Program Files/Arduino/libraries;C:/Program Files/Arduino/hardware/arduino/libraries;C:/Program Files/Visual Micro/Visual Micro for Arduino/Micro Platforms/default/debuggers;D:/Projects/libraries;c:/program files/arduino/hardware/tools/avr/avr/include/;c:/program files/arduino/hardware/tools/avr/avr/include/avr/;c:/program files/arduino/hardware/tools/avr/avr/;c:/program files/arduino/hardware/tools/avr/lib/gcc/avr/4.3.2/include/;;D:/Projects/libraries/libraries;C:/Program Files/Arduino/hardware/arduino/variants/standard;C:/Program Files/Arduino/libraries/Platform;C:/Program Files/Arduino/libraries/Platform/utility;C:/Program Files/Arduino/libraries/Electric;C:/Program Files/Arduino/libraries/Electric/utility;D:/Projects/libraries/TestLib;D:/Projects/libraries/TestLib/utility;D:/Projects/libraries/Platform;D:/Projects/libraries/Platform/utility;D:/Projects/libraries/Electric;D:/Projects/libraries/Electric/utility;C:/Program Files/Arduino/libraries/RealTimeClock;C:/Program Files/Arduino/libraries/RealTimeClock/utility;C:/Program Files/Arduino/libraries/ThreeWire;C:/Program Files/Arduino/libraries/ThreeWire/utility;C:/Program Files/Arduino/libraries/DS1302RTC;C:/Program Files/Arduino/libraries/DS1302RTC/utility;C:/Program Files/Arduino/libraries/Time;C:/Program Files/Arduino/libraries/Time/utility;C:/Program Files/Arduino/libraries/SPI;C:/Program Files/Arduino/libraries/SPI/utility;</VMSETTING_IncludePaths>
+    <VMSETTING_IncludePaths>C:/Program Files/Arduino/hardware/arduino/cores/arduino;C:/Program Files/Arduino/hardware/arduino/variants/eightanaloginputs;../../RoverTest;C:/Program Files/Arduino/libraries;C:/Program Files/Arduino/hardware/arduino/libraries;C:/Program Files/Visual Micro/Visual Micro for Arduino/Micro Platforms/default/debuggers;D:/Projects/libraries;c:/program files/arduino/hardware/tools/avr/avr/include/;c:/program files/arduino/hardware/tools/avr/avr/include/avr/;c:/program files/arduino/hardware/tools/avr/avr/;c:/program files/arduino/hardware/tools/avr/lib/gcc/avr/4.3.2/include/;;D:/Projects/libraries/libraries;C:/Program Files/Arduino/hardware/arduino/variants/standard;C:/Program Files/Arduino/libraries/Platform;C:/Program Files/Arduino/libraries/Platform/utility;C:/Program Files/Arduino/libraries/Electric;C:/Program Files/Arduino/libraries/Electric/utility;D:/Projects/libraries/TestLib;D:/Projects/libraries/TestLib/utility;D:/Projects/libraries/Platform;D:/Projects/libraries/Platform/utility;D:/Projects/libraries/Electric;D:/Projects/libraries/Electric/utility;C:/Program Files/Arduino/libraries/RealTimeClock;C:/Program Files/Arduino/libraries/RealTimeClock/utility;C:/Program Files/Arduino/libraries/ThreeWire;C:/Program Files/Arduino/libraries/ThreeWire/utility;C:/Program Files/Arduino/libraries/DS1302RTC;C:/Program Files/Arduino/libraries/DS1302RTC/utility;C:/Program Files/Arduino/libraries/Time;C:/Program Files/Arduino/libraries/Time/utility;C:/Program Files/Arduino/libraries/SPI;C:/Program Files/Arduino/libraries/SPI/utility;C:/Program Files/Arduino/libraries/ExtIO;C:/Program Files/Arduino/libraries/ExtIO/utility;</VMSETTING_IncludePaths>
     <VisualMicroSettings>
       <VisualMicroSettings>
         <arduino.board.name>nano328</arduino.board.name>
@@ -258,6 +262,8 @@ vmresolved.tools.path=C:\Program Files\Arduino\hardware\tools\avr
       <Value>C:/Program Files/Arduino/libraries/SPI</Value>
       <Value>C:/Program Files/Arduino/libraries/Electric/utility</Value>
       <Value>C:/Program Files/Arduino/libraries/Electric</Value>
+      <Value>C:/Program Files/Arduino/libraries/ExtIO/utility</Value>
+      <Value>C:/Program Files/Arduino/libraries/ExtIO</Value>
       <Value>C:/Program Files/Arduino/libraries/Platform/utility</Value>
       <Value>C:/Program Files/Arduino/libraries/Platform</Value>
       <Value>../../RoverTest</Value>
@@ -299,6 +305,8 @@ vmresolved.tools.path=C:\Program Files\Arduino\hardware\tools\avr
       <Value>C:/Program Files/Arduino/libraries/SPI</Value>
       <Value>C:/Program Files/Arduino/libraries/Electric/utility</Value>
       <Value>C:/Program Files/Arduino/libraries/Electric</Value>
+      <Value>C:/Program Files/Arduino/libraries/ExtIO/utility</Value>
+      <Value>C:/Program Files/Arduino/libraries/ExtIO</Value>
       <Value>C:/Program Files/Arduino/libraries/Platform/utility</Value>
       <Value>C:/Program Files/Arduino/libraries/Platform</Value>
       <Value>../../RoverTest</Value>
@@ -318,7 +326,7 @@ vmresolved.tools.path=C:\Program Files\Arduino\hardware\tools\avr
   <avrgcccpp.assembler.debugging.DebugLevel>Default (-Wa,-g)</avrgcccpp.assembler.debugging.DebugLevel>
 </AvrGccCpp>
     </ToolchainSettings>
-    <VMSETTING_IncludePaths>C:/Program Files/Arduino/hardware/arduino/cores/arduino;C:/Program Files/Arduino/hardware/arduino/variants/eightanaloginputs;../../RoverTest;C:/Program Files/Arduino/libraries;C:/Program Files/Arduino/hardware/arduino/libraries;C:/Program Files/Visual Micro/Visual Micro for Arduino/Micro Platforms/default/debuggers;D:/Projects/libraries;c:/program files/arduino/hardware/tools/avr/avr/include/;c:/program files/arduino/hardware/tools/avr/avr/include/avr/;c:/program files/arduino/hardware/tools/avr/avr/;c:/program files/arduino/hardware/tools/avr/lib/gcc/avr/4.3.2/include/;;D:/Projects/libraries/libraries;C:/Program Files/Arduino/hardware/arduino/variants/standard;C:/Program Files/Arduino/libraries/Platform;C:/Program Files/Arduino/libraries/Platform/utility;C:/Program Files/Arduino/libraries/Electric;C:/Program Files/Arduino/libraries/Electric/utility;D:/Projects/libraries/TestLib;D:/Projects/libraries/TestLib/utility;D:/Projects/libraries/Platform;D:/Projects/libraries/Platform/utility;D:/Projects/libraries/Electric;D:/Projects/libraries/Electric/utility;C:/Program Files/Arduino/libraries/RealTimeClock;C:/Program Files/Arduino/libraries/RealTimeClock/utility;C:/Program Files/Arduino/libraries/ThreeWire;C:/Program Files/Arduino/libraries/ThreeWire/utility;C:/Program Files/Arduino/libraries/DS1302RTC;C:/Program Files/Arduino/libraries/DS1302RTC/utility;C:/Program Files/Arduino/libraries/Time;C:/Program Files/Arduino/libraries/Time/utility;C:/Program Files/Arduino/libraries/SPI;C:/Program Files/Arduino/libraries/SPI/utility;</VMSETTING_IncludePaths>
+    <VMSETTING_IncludePaths>C:/Program Files/Arduino/hardware/arduino/cores/arduino;C:/Program Files/Arduino/hardware/arduino/variants/eightanaloginputs;../../RoverTest;C:/Program Files/Arduino/libraries;C:/Program Files/Arduino/hardware/arduino/libraries;C:/Program Files/Visual Micro/Visual Micro for Arduino/Micro Platforms/default/debuggers;D:/Projects/libraries;c:/program files/arduino/hardware/tools/avr/avr/include/;c:/program files/arduino/hardware/tools/avr/avr/include/avr/;c:/program files/arduino/hardware/tools/avr/avr/;c:/program files/arduino/hardware/tools/avr/lib/gcc/avr/4.3.2/include/;;D:/Projects/libraries/libraries;C:/Program Files/Arduino/hardware/arduino/variants/standard;C:/Program Files/Arduino/libraries/Platform;C:/Program Files/Arduino/libraries/Platform/utility;C:/Program Files/Arduino/libraries/Electric;C:/Program Files/Arduino/libraries/Electric/utility;D:/Projects/libraries/TestLib;D:/Projects/libraries/TestLib/utility;D:/Projects/libraries/Platform;D:/Projects/libraries/Platform/utility;D:/Projects/libraries/Electric;D:/Projects/libraries/Electric/utility;C:/Program Files/Arduino/libraries/RealTimeClock;C:/Program Files/Arduino/libraries/RealTimeClock/utility;C:/Program Files/Arduino/libraries/ThreeWire;C:/Program Files/Arduino/libraries/ThreeWire/utility;C:/Program Files/Arduino/libraries/DS1302RTC;C:/Program Files/Arduino/libraries/DS1302RTC/utility;C:/Program Files/Arduino/libraries/Time;C:/Program Files/Arduino/libraries/Time/utility;C:/Program Files/Arduino/libraries/SPI;C:/Program Files/Arduino/libraries/SPI/utility;C:/Program Files/Arduino/libraries/ExtIO;C:/Program Files/Arduino/libraries/ExtIO/utility;</VMSETTING_IncludePaths>
     <VisualMicroSettings>
       <VisualMicroSettings>
         <arduino.board.name>nano328</arduino.board.name>

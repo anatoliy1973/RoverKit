@@ -10,6 +10,7 @@
 #define __EXTENDER_H__
 
 #include <inttypes.h>
+#include "Platform/MultiPlatform.h"
 
 namespace ExtIO
 {
@@ -35,7 +36,7 @@ namespace ExtIO
             // Sets an electric level on the indicated pin
             void DigitalWrite(uint8_t pin, uint8_t val);
 
-        protected:
+        private:
             // Gets a flags indicating the pin possibilities
             virtual PinFlags get_PinFlags(uint8_t pin)=0;
             // Flashes the data from/to the memory buffer

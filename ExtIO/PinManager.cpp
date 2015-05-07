@@ -7,15 +7,15 @@
 
 
 #include "PinManager.h"
-#include "binary.h"
+#include <binary.h>
 
 namespace ExtIO
 {
 
     //variables
-    static uint8_t m_startExtPin;
-    static Extender** m_extenders;
-    static uint8_t m_extendersCount;
+    uint8_t PinManagerClass::m_startExtPin;
+    Extender** PinManagerClass::m_extenders;
+    uint8_t PinManagerClass::m_extendersCount;
 
     void PinManagerClass::Init(uint8_t startExtPin, Extender** extenders, uint8_t extendersCount)
     {
@@ -27,11 +27,12 @@ namespace ExtIO
     void PinManagerClass::PinMode(uint8_t pin, uint8_t mode)
     {
         Extender* extender = NULL;
-        if (FindExtender(&pin, extender))
+        int ipin  = pin;
+        if (FindExtender(&ipin, &extender))
         {
-            if (pin > B00)
+            if (ipin > B00)
             {
-                extender->PinMode(pin, mode);
+                extender->PinMode(ipin, mode);
             }
         }
         else
@@ -43,11 +44,12 @@ namespace ExtIO
     uint8_t PinManagerClass::DigitalRead(uint8_t pin)
     {
         Extender* extender = NULL;
-        if (FindExtender(&pin, extender))
+        int ipin  = pin;
+        if (FindExtender(&ipin, &extender))
         {
-            if (pin > B00)
+            if (ipin > B00)
             {
-                return extender->DigitalRead(pin);
+                return extender->DigitalRead(ipin);
             }
         }
         else
@@ -61,11 +63,12 @@ namespace ExtIO
     void PinManagerClass::DigitalWrite(uint8_t pin, uint8_t val)
     {
         Extender* extender = NULL;
-        if (FindExtender(&pin, extender))
+        int ipin  = pin;
+        if (FindExtender(&ipin, &extender))
         {
-            if (pin > B00)
+            if (ipin > B00)
             {
-                extender->DigitalWrite(pin, val);
+                extender->DigitalWrite(ipin, val);
             }
         }
         else
@@ -74,7 +77,7 @@ namespace ExtIO
         }
     }
 
-    bool PinManagerClass::FindExtender(uint8_t* pin, Extender* extender)
+    bool PinManagerClass::FindExtender(int* pin, Extender** extender)
     {
         if (*pin < m_startExtPin)
         {
@@ -85,12 +88,13 @@ namespace ExtIO
         for (uint8_t i = 0; i < m_extendersCount; i++)
         {
             uint8_t extenderPins = m_extenders[i]->get_PinsCount();
-            *pin -= extenderPins;
             if (*pin <= extenderPins)
             {
-                extender = m_extenders[i];
+                *extender = m_extenders[i];
                 break;
             }
+
+            *pin -= extenderPins;
         }
 
         return true;

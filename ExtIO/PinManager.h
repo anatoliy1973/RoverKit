@@ -10,7 +10,6 @@
 #define __PINMANAGER_H__
 
 #include <inttypes.h>
-#include "Platform/MultiPlatform.h"
 #include "Extender.h"
 
 namespace ExtIO
@@ -21,6 +20,12 @@ namespace ExtIO
     //////////////////////////////////////////////////////////////////////////
     class PinManagerClass
     {
+        // variables
+        private:
+            static uint8_t m_startExtPin;
+            static Extender** m_extenders;
+            static uint8_t m_extendersCount;
+
         //functions
         public:
             // Initializes PinManager
@@ -36,7 +41,7 @@ namespace ExtIO
             static void DigitalWrite(uint8_t pin, uint8_t val);
 
         private:
-            static bool FindExtender(uint8_t* pin, Extender* extender);
+            static bool FindExtender(int* pin, Extender** extender);
 
     }; //PinManagerClass
 

@@ -18,14 +18,14 @@
 using namespace ExtIO;
 
 #define STARTING_EXT_PIN 36
-#define SS_EXTENDER 7
+#define SS_EXTENDER 9
 // Optional connection for RTC module
-#define DS1302_GND_PIN 6
-#define DS1302_VCC_PIN 5
+#define DS1302_GND_PIN 37
+#define DS1302_VCC_PIN 36
 
-// Set pins:  CE, IO,CLK
-DS1302RTC RTC(4, 3, 2);
-Extender74HC595 *outputExtender = new Extender74HC595(1, SS_EXTENDER);
+// Set pins: CE, IO, CLK
+DS1302RTC RTC(38, 8, 39);
+Extender *outputExtender = new Extender74HC595(1, SS_EXTENDER);
 
 /*SimpleMotorDriver *leftMotor = new SimpleMotorDriver(2, 4, 6);
 SimpleMotorDriver *rigthMotor = new SimpleMotorDriver(7, 8, 9);*/
@@ -33,17 +33,19 @@ SimpleMotorDriver *rigthMotor = new SimpleMotorDriver(7, 8, 9);*/
 void setup()
 {
     Serial.begin(115200);
+    SPI.begin();
+
     Extender** extenders = new Extender*[1];
     extenders[0] = (Extender*)outputExtender;
 
     PinManager.Init(STARTING_EXT_PIN, extenders, 1);
 
     // Activate RTC module
-    digitalWrite(DS1302_GND_PIN, LOW);
-    pinMode(DS1302_GND_PIN, OUTPUT);
+    PinManager.PinMode(DS1302_GND_PIN, OUTPUT);
+    PinManager.DigitalWrite(DS1302_GND_PIN, LOW);
 
-    digitalWrite(DS1302_VCC_PIN, HIGH);
-    pinMode(DS1302_VCC_PIN, OUTPUT);
+    PinManager.PinMode(DS1302_VCC_PIN, OUTPUT);
+    PinManager.DigitalWrite(DS1302_VCC_PIN, HIGH);
 
     delay(500);
 
@@ -79,6 +81,8 @@ void loop()
         printDateTime(t);
         Serial.println();
     }
+
+    Serial.flush();
 
     //leftMotor->Throttle(100);
     //rigthMotor->Throttle(100);

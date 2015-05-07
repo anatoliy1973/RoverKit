@@ -35,20 +35,15 @@ namespace ExtIO
             // Actually does nothing in this class
             virtual void PinMode(uint8_t pin, uint8_t mode);
 
-        protected:
+        private:
             // Always returns OutputPin
             virtual PinFlags get_PinFlags(uint8_t pin);
             // Flashes internal buffer into the physical device
             virtual void Flash();
-
+            // Returns an electric level on the indicated pin
             virtual uint8_t DigitalReadInternal(uint8_t pin);
-
+            // Sets an electric level on the indicated pin
             virtual void DigitalWriteInternal(uint8_t pin, uint8_t val);
-
-        private:
-            Extender74HC595(const Extender74HC595 &c);
-            Extender74HC595& operator=(const Extender74HC595 &c);
-
 
     }; //Extender74HC595
 
