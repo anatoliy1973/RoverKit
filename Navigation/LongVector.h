@@ -22,6 +22,9 @@ class LongVector
 
     //functions
     public:
+        // Default constructor
+        LongVector();
+        
         // Creates a vector with indicated coordinates
         LongVector(long x, long y, long z);
 
@@ -31,9 +34,12 @@ class LongVector
         // Copies a a copy of indicated vector
         LongVector(LongVector &c);
 
-        inline long get_X() { return this->m_x; };
-        inline long get_Y() { return this->m_y; };
-        inline long get_Z() { return this->m_z; };
+        long get_X();
+        void set_X(long x);
+        long get_Y();
+        void set_Y(long y);
+        long get_Z();
+        void set_Z(long z);
 
         LongVector& operator = (LongVector &c) { this->m_x = c.m_x; this->m_y = c.m_y; this->m_z = c.m_z; return *this; };
         LongVector& operator = (long l) { this->m_x = this->m_y = this->m_z = l; return *this; };
@@ -66,7 +72,7 @@ class LongVector
 
         friend LongVector* operator / (const LongVector& x, int y)
         {
-            int halfY = y / 2;
+            int halfY = y >> 1;
             return new LongVector((x.m_x + halfY) / y, (x.m_y + halfY)/ y, (x.m_z + halfY)/ y);
         }
 

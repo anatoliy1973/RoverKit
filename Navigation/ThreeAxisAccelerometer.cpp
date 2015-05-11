@@ -8,7 +8,18 @@
 
 #include "ThreeAxisAccelerometer.h"
 
-// default constructor
-ThreeAxisAccelerometer::ThreeAxisAccelerometer()
+namespace Navigation
 {
-} //ThreeAxisAccelerometer
+
+    // default constructor
+    ThreeAxisAccelerometer::ThreeAxisAccelerometer()
+    {
+        this->m_value = new LongVector();
+    } //ThreeAxisAccelerometer
+
+    LongVector& ThreeAxisAccelerometer::get_Value()
+    {
+        return *this->m_value;
+    }
+
+}

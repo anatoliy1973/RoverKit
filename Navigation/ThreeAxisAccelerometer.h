@@ -10,21 +10,26 @@
 #define __THREEAXISACCELEROMETER_H__
 
 #include "Platform/MultiPlatform.h"
+#include "LongVector.h"
 
-class ThreeAxisAccelerometer
+namespace Navigation
 {
-//variables
-public:
-protected:
-private:
 
-//functions
-public:
-    ThreeAxisAccelerometer();
+    class ThreeAxisAccelerometer
+    {
+        //variables
+        private:
+            LongVector* m_value;
 
-protected:
-private:
+        //functions
+        public:
+            ThreeAxisAccelerometer();
 
-}; //ThreeAxisAccelerometer
+            LongVector& get_Value();
+        protected:
+        private:
 
+    }; //ThreeAxisAccelerometer
+
+}
 #endif //__THREEAXISACCELEROMETER_H__
