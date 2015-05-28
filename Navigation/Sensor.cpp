@@ -25,16 +25,26 @@ namespace Navigation
     }
 
     // Gets the last read micros
-    uint32_t Sensor::get_Microc()
+    uint32_t Sensor::get_Micros()
     {
         return this->m_micros;
+    }
+
+    void Sensor::set_Baseline(int value)
+    {
+        this->m_baseline = value;
     }
 
     // Reads a value from sensor
     void Sensor::Read()
     {
-        this->m_value = digitalRead(this->m_pin);
+        this->m_value = digitalRead(this->m_pin) - this->m_baseline;
         this->m_micros = micros();
+    }
+
+    void Sensor::Reset()
+    {
+        this->m_value = 0;
     }
 
 }

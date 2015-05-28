@@ -10,6 +10,9 @@
 #define ARITHMETIC_H_
 
 #include <inttypes.h>
+#include <limits.h>
+
+#define ULONG_DIFF(a, b) (a >= b ? a - b : ULONG_MAX - b + a)
 
 // Convert Decimal to Binary Coded Decimal (BCD)
 uint8_t Dec2Bcd(uint8_t num);

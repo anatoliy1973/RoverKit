@@ -15,7 +15,7 @@ namespace Navigation
     class ThreeAxisGyro
     {
     //variables
-    private:
+    protected:
         float m_x;
         float m_y;
         float m_z;

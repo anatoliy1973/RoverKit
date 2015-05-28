@@ -8,100 +8,39 @@
 
 #include "AnalogGyro.h"
 
-#define TEST_NUM 10
-#define TEST_DELAY 8
-
 namespace Navigation
 {
 
-    AnalogGyro::AnalogGyro(uint8_t pinX, uint8_t pinY, uint8_t pinZ, float scale)
+    // Initializes a new instance of the AnalogGyro class
+    //  pinX: indicates a pin the X sensor is connected to
+    //  pinY: indicates a pin the Y sensor is connected to
+    //  pinZ: indicates a pin the Z sensor is connected to
+    //  threashold: indicates a # of microseconds between measurements
+    //  scale: indicates a ratio of sensor value to radiant
+    AnalogGyro::AnalogGyro(uint8_t pinX, uint8_t pinY, uint8_t pinZ, uint16_t threashold, float scale)
     {
-        this->m_sensorX = new Sensor(pinX);
-        this->m_sensorY = new Sensor(pinY);
-        this->m_sensorZ = new Sensor(pinZ);
         this->m_scale = scale;
 
-        this->Calibrate();
+        this->m_sensor = new ThreeAxisAnalogSensor(pinX, pinY, pinZ, threashold);
+        this->m_sensor->Calibrate();
 
-        Serial.println(m_baseLevel);
-        Serial.println(m_noiseLevel);
+        this->m_lastUpdateMicros = micros();
     } //AnalogGyro
 
+    // Updates the gyro's data
     void AnalogGyro::Update()
     {
-        //TODO:
-    }
+        this->m_sensor->Read();
+        uint32_t currentMicros = micros();
+        uint32_t diff = ULONG_DIFF(currentMicros, this->m_lastUpdateMicros);
 
-    void AnalogGyro::GetSensorStats(Sensor* sensor, int* values)
-    {
-        for (uint8_t i = 0; i < TEST_NUM; i++)
+        if (diff > 0)
         {
-            sensor->Read();
-            values[i] = sensor->get_Value();
-            delay(TEST_DELAY);
-        }
-    }
+            this->m_x += m_scale * (float)(this->m_sensor->get_ValueX() * diff);
+            this->m_y += m_scale * (float)(this->m_sensor->get_ValueY() * diff);
+            this->m_z += m_scale * (float)(this->m_sensor->get_ValueZ() * diff);
 
-    void AnalogGyro::AnalyzeStats(int* values, int* base, int* noise)
-    {
-        int sum = 0;
-        for (uint8_t i = 0; i < TEST_NUM; i++)
-        {
-            sum += values[i];
-        }
-
-        int avg = sum / TEST_NUM;
-        int dispersion = 0;
-
-        for (uint8_t i = 0; i < TEST_NUM; i++)
-        {
-            dispersion = max(dispersion, abs(avg - values[i]));
-        }
-
-        *base = avg;
-        *noise = dispersion;
-    }
-
-    void AnalogGyro::SetBaseline(int base1, int base2, int noise1, int noise2)
-    {
-        this->m_baseLevel = (base1 + base2 + 1) >> 1;
-        this->m_noiseLevel = max(noise1, noise2);
-    }
-
-    void AnalogGyro::Calibrate()
-    {
-        int* values = new int[TEST_NUM];
-
-        GetSensorStats(this->m_sensorX, values);
-        int base1 = 0;
-        int noise1 = 0;
-        AnalyzeStats(values, &base1, &noise1);
-
-        GetSensorStats(this->m_sensorY, values);
-        int base2 = 0;
-        int noise2 = 0;
-        AnalyzeStats(values, &base2, &noise2);
-
-        GetSensorStats(this->m_sensorZ, values);
-        int base3 = 0;
-        int noise3 = 0;
-        AnalyzeStats(values, &base3, &noise3);
-
-        int diff_1_2 = abs(base1 - base2);
-        int diff_1_3 = abs(base1 - base3);
-        int diff_2_3 = abs(base2 - base3);
-
-        if (diff_1_2 <= diff_1_3 && diff_1_2 <= diff_2_3)
-        {
-            this->SetBaseline(base1, base2, noise1, noise2);
-        }
-        else if (diff_1_3 <= diff_1_2 && diff_1_3 <= diff_2_3)
-        {
-            this->SetBaseline(base1, base3, noise1, noise3);
-        }
-        else //if (diff_2_3 <= diff_1_2 && diff_2_3 <= diff_1_3)
-        {
-            this->SetBaseline(base2, base3, noise2, noise3);
+            this->m_lastUpdateMicros = currentMicros;
         }
     }
 

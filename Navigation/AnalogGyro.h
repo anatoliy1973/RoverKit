@@ -13,6 +13,7 @@
 #include "Platform/MultiPlatform.h"
 #include "ThreeAxisGyro.h"
 #include "Sensor.h"
+#include "ThreeAxisAnalogSensor.h"
 
 namespace Navigation
 {
@@ -21,24 +22,25 @@ namespace Navigation
     {
         //variables
         private:
-            Sensor* m_sensorX;
-            Sensor* m_sensorY;
-            Sensor* m_sensorZ;
+            ThreeAxisAnalogSensor* m_sensor;
             float m_scale;
-            int m_baseLevel;
-            int m_noiseLevel;
+            uint32_t m_lastUpdateMicros;
 
         //functions
         public:
-            AnalogGyro(uint8_t pinX, uint8_t pinY, uint8_t pinZ, float scale);
+            // Initializes a new instance of the AnalogGyro class
+            //  pinX: indicates a pin the X sensor is connected to
+            //  pinY: indicates a pin the Y sensor is connected to
+            //  pinZ: indicates a pin the Z sensor is connected to
+            //  threashold: indicates a # of microseconds between measurements
+            //  scale: indicates a ratio of sensor value to radiant
+            AnalogGyro(uint8_t pinX, uint8_t pinY, uint8_t pinZ, uint16_t threashold, float scale);
 
+            // Updates the gyro's data
             virtual void Update();
 
         private:
-            static void GetSensorStats(Sensor* sensor, int* values);
-            static void AnalyzeStats(int* values, int* base1, int* noise1);
-            void SetBaseline(int base1, int base2, int noise1, int noise2);
-            void Calibrate();
+
     }; //AnalogGyro
 
 }

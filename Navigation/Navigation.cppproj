@@ -170,6 +170,12 @@
     <Compile Include="ThreeAxisAccelerometer.h">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="ThreeAxisAnalogSensor.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="ThreeAxisAnalogSensor.h">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="ThreeAxisGyro.cpp">
       <SubType>compile</SubType>
     </Compile>
