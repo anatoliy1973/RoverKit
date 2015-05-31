@@ -3,7 +3,7 @@
  *
  * Created: 2/21/2015 22:54:23
  * Author: Tolik
- */ 
+ */
 
 #include "Platform\MultiPlatform.h"
 #include "ExtIO\PinManager.h"
@@ -13,6 +13,7 @@
 #include "Navigation\ThreeAxisGyro.h"
 #include "Navigation\Sensor.h"
 #include "Navigation\AnalogGyro.h"
+#include "MemoryFree\MemoryFree.h"
 
 #include <SPI\SPI.h>
 #include <DS1302RTC.h>
@@ -26,6 +27,7 @@ using namespace Navigation;
 // Optional connection for RTC module
 #define DS1302_GND_PIN 37
 #define DS1302_VCC_PIN 36
+#define GYRO_SCALE (500.0 / 1000000.0) / 270.0
 
 // Set pins: CE, IO, CLK
 DS1302RTC RTC(38, 8, 39);
@@ -35,21 +37,12 @@ SimpleMotorDriver *leftMotor = NULL;
 SimpleMotorDriver *rigthMotor = NULL;
 AnalogGyro* gyro = NULL;
 
-int analogValue = 0;
+float currentZ = 0;
 
 void setup()
 {
     Serial.begin(115200);
     SPI.begin();
-
-    int v = 277;
-    int nv = -277;
-
-    Serial.print(v >> 2);
-    Serial.println();
-
-    Serial.print(nv >> 2);
-    Serial.println();
 
     Extender** extenders = new Extender*[1];
     extenders[0] = (Extender*)outputExtender;
@@ -88,8 +81,9 @@ void setup()
     leftMotor->Break();
     rigthMotor->Break();
 
-    gyro = new AnalogGyro(A2, A3, A1, 1);
-    gyro->Update();
+    gyro = new AnalogGyro(A1, A2, A3, 6667, GYRO_SCALE);
+    delay(1000);
+    //gyro->Update();
 }
 
 void loop()
@@ -97,8 +91,6 @@ void loop()
     static time_t tLast;
     time_t t;
     tmElements_t tm;
-
-    uint32_t startMillis = millis();
 
     //check for input to set the RTC, minimum length is 12, i.e. yy,m,d,h,m,s
     if (Serial.available() >= 12)
@@ -144,18 +136,12 @@ void loop()
         //Serial.println();
     }
 
-    int iv = analogRead(A0);
-    if (abs(iv - analogValue) > 1)
+    //Serial.println(analogRead(A1));
+    gyro->Update();
+    if (currentZ != gyro->get_Z())
     {
-        Serial.println(iv);
-        analogValue = iv;
-    }
-
-    uint32_t totalMillis = millis() - startMillis;
-
-    if (totalMillis < 10)
-    {
-        delay(10 - totalMillis);
+        currentZ = gyro->get_Z();
+        Serial.println(currentZ);
     }
 
     //leftMotor->Throttle(100);
@@ -214,4 +200,10 @@ void printI00(int val, char delim)
     {
         Serial.print(delim);
     }
+}
+
+void printFreeMemory()
+{
+    Serial.print("Memory available: ");
+    Serial.println(freeMemory());
 }

@@ -1,4 +1,4 @@
-/* 
+/*
 * Sensor.cpp
 *
 * Created: 5/9/2015 13:42:44
@@ -16,6 +16,7 @@ namespace Navigation
     Sensor::Sensor(uint8_t pin)
     {
         this->m_pin = pin;
+        pinMode(this->m_pin, INPUT);
     } //Sensor
 
     // Gets the last sensor value
@@ -38,7 +39,7 @@ namespace Navigation
     // Reads a value from sensor
     void Sensor::Read()
     {
-        this->m_value = digitalRead(this->m_pin) - this->m_baseline;
+        this->m_value = analogRead(this->m_pin) - this->m_baseline;
         this->m_micros = micros();
     }
 

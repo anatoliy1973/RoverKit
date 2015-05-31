@@ -22,6 +22,7 @@ void printDateTime(time_t t);
 void printTime(time_t t);
 void printDate(time_t t);
 void printI00(int val, char delim);
+void printFreeMemory();
 
 #include "C:\Program Files\Arduino\hardware\arduino\variants\eightanaloginputs\pins_arduino.h" 
 #include "C:\Program Files\Arduino\hardware\arduino\cores\arduino\arduino.h"

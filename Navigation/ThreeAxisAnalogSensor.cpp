@@ -1,4 +1,4 @@
-/* 
+/*
 * ThreeAxisAnalogSensor.cpp
 *
 * Created: 5/24/2015 15:34:59
@@ -8,7 +8,7 @@
 
 #include "ThreeAxisAnalogSensor.h"
 
-#define TEST_NUM 10
+#define TEST_NUM 20
 
 namespace Navigation
 {
@@ -43,8 +43,10 @@ namespace Navigation
 
     void ThreeAxisAnalogSensor::Calibrate()
     {
-        this->m_noiseLevel =
-            max(this->CalibrateSensor(this->m_sensorX), max(this->CalibrateSensor(this->m_sensorY), this->CalibrateSensor(this->m_sensorY)));
+        uint8_t noiseX = this->CalibrateSensor(this->m_sensorX);
+        uint8_t noiseY = this->CalibrateSensor(this->m_sensorY);
+        uint8_t noiseZ = this->CalibrateSensor(this->m_sensorZ);
+        this->m_noiseLevel = max(noiseX, max(noiseY, noiseZ));
     }
 
     void ThreeAxisAnalogSensor::Read()

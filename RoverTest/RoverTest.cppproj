@@ -71,18 +71,18 @@
       <Value>C:/Program Files/Arduino/libraries</Value>
       <Value>C:/Program Files/Arduino/libraries/Time/utility</Value>
       <Value>C:/Program Files/Arduino/libraries/Time</Value>
-      <Value>C:/Program Files/Arduino/libraries/DS1302RTC/utility</Value>
-      <Value>C:/Program Files/Arduino/libraries/DS1302RTC</Value>
       <Value>C:/Program Files/Arduino/libraries/SPI/utility</Value>
       <Value>C:/Program Files/Arduino/libraries/SPI</Value>
-      <Value>C:/Program Files/Arduino/libraries/Navigation/utility</Value>
-      <Value>C:/Program Files/Arduino/libraries/Navigation</Value>
-      <Value>C:/Program Files/Arduino/libraries/Electric/utility</Value>
-      <Value>C:/Program Files/Arduino/libraries/Electric</Value>
-      <Value>C:/Program Files/Arduino/libraries/ExtIO/utility</Value>
-      <Value>C:/Program Files/Arduino/libraries/ExtIO</Value>
       <Value>C:/Program Files/Arduino/libraries/Platform/utility</Value>
       <Value>C:/Program Files/Arduino/libraries/Platform</Value>
+      <Value>C:/Program Files/Arduino/libraries/Navigation/utility</Value>
+      <Value>C:/Program Files/Arduino/libraries/Navigation</Value>
+      <Value>C:/Program Files/Arduino/libraries/ExtIO/utility</Value>
+      <Value>C:/Program Files/Arduino/libraries/ExtIO</Value>
+      <Value>C:/Program Files/Arduino/libraries/Electric/utility</Value>
+      <Value>C:/Program Files/Arduino/libraries/Electric</Value>
+      <Value>C:/Program Files/Arduino/libraries/DS1302RTC/utility</Value>
+      <Value>C:/Program Files/Arduino/libraries/DS1302RTC</Value>
       <Value>../../RoverTest</Value>
       <Value>C:/Program Files/Arduino/hardware/arduino/variants/eightanaloginputs</Value>
       <Value>C:/Program Files/Arduino/hardware/arduino/cores/arduino</Value>
@@ -116,18 +116,18 @@
       <Value>C:/Program Files/Arduino/libraries</Value>
       <Value>C:/Program Files/Arduino/libraries/Time/utility</Value>
       <Value>C:/Program Files/Arduino/libraries/Time</Value>
-      <Value>C:/Program Files/Arduino/libraries/DS1302RTC/utility</Value>
-      <Value>C:/Program Files/Arduino/libraries/DS1302RTC</Value>
       <Value>C:/Program Files/Arduino/libraries/SPI/utility</Value>
       <Value>C:/Program Files/Arduino/libraries/SPI</Value>
-      <Value>C:/Program Files/Arduino/libraries/Navigation/utility</Value>
-      <Value>C:/Program Files/Arduino/libraries/Navigation</Value>
-      <Value>C:/Program Files/Arduino/libraries/Electric/utility</Value>
-      <Value>C:/Program Files/Arduino/libraries/Electric</Value>
-      <Value>C:/Program Files/Arduino/libraries/ExtIO/utility</Value>
-      <Value>C:/Program Files/Arduino/libraries/ExtIO</Value>
       <Value>C:/Program Files/Arduino/libraries/Platform/utility</Value>
       <Value>C:/Program Files/Arduino/libraries/Platform</Value>
+      <Value>C:/Program Files/Arduino/libraries/Navigation/utility</Value>
+      <Value>C:/Program Files/Arduino/libraries/Navigation</Value>
+      <Value>C:/Program Files/Arduino/libraries/ExtIO/utility</Value>
+      <Value>C:/Program Files/Arduino/libraries/ExtIO</Value>
+      <Value>C:/Program Files/Arduino/libraries/Electric/utility</Value>
+      <Value>C:/Program Files/Arduino/libraries/Electric</Value>
+      <Value>C:/Program Files/Arduino/libraries/DS1302RTC/utility</Value>
+      <Value>C:/Program Files/Arduino/libraries/DS1302RTC</Value>
       <Value>../../RoverTest</Value>
       <Value>C:/Program Files/Arduino/hardware/arduino/variants/eightanaloginputs</Value>
       <Value>C:/Program Files/Arduino/hardware/arduino/cores/arduino</Value>
@@ -260,18 +260,18 @@ vmresolved.tools.path=C:\Program Files\Arduino\hardware\tools\avr
       <Value>C:/Program Files/Arduino/libraries</Value>
       <Value>C:/Program Files/Arduino/libraries/Time/utility</Value>
       <Value>C:/Program Files/Arduino/libraries/Time</Value>
-      <Value>C:/Program Files/Arduino/libraries/DS1302RTC/utility</Value>
-      <Value>C:/Program Files/Arduino/libraries/DS1302RTC</Value>
       <Value>C:/Program Files/Arduino/libraries/SPI/utility</Value>
       <Value>C:/Program Files/Arduino/libraries/SPI</Value>
-      <Value>C:/Program Files/Arduino/libraries/Navigation/utility</Value>
-      <Value>C:/Program Files/Arduino/libraries/Navigation</Value>
-      <Value>C:/Program Files/Arduino/libraries/Electric/utility</Value>
-      <Value>C:/Program Files/Arduino/libraries/Electric</Value>
-      <Value>C:/Program Files/Arduino/libraries/ExtIO/utility</Value>
-      <Value>C:/Program Files/Arduino/libraries/ExtIO</Value>
       <Value>C:/Program Files/Arduino/libraries/Platform/utility</Value>
       <Value>C:/Program Files/Arduino/libraries/Platform</Value>
+      <Value>C:/Program Files/Arduino/libraries/Navigation/utility</Value>
+      <Value>C:/Program Files/Arduino/libraries/Navigation</Value>
+      <Value>C:/Program Files/Arduino/libraries/ExtIO/utility</Value>
+      <Value>C:/Program Files/Arduino/libraries/ExtIO</Value>
+      <Value>C:/Program Files/Arduino/libraries/Electric/utility</Value>
+      <Value>C:/Program Files/Arduino/libraries/Electric</Value>
+      <Value>C:/Program Files/Arduino/libraries/DS1302RTC/utility</Value>
+      <Value>C:/Program Files/Arduino/libraries/DS1302RTC</Value>
       <Value>../../RoverTest</Value>
       <Value>C:/Program Files/Arduino/hardware/arduino/variants/eightanaloginputs</Value>
       <Value>C:/Program Files/Arduino/hardware/arduino/cores/arduino</Value>
@@ -305,18 +305,18 @@ vmresolved.tools.path=C:\Program Files\Arduino\hardware\tools\avr
       <Value>C:/Program Files/Arduino/libraries</Value>
       <Value>C:/Program Files/Arduino/libraries/Time/utility</Value>
       <Value>C:/Program Files/Arduino/libraries/Time</Value>
-      <Value>C:/Program Files/Arduino/libraries/DS1302RTC/utility</Value>
-      <Value>C:/Program Files/Arduino/libraries/DS1302RTC</Value>
       <Value>C:/Program Files/Arduino/libraries/SPI/utility</Value>
       <Value>C:/Program Files/Arduino/libraries/SPI</Value>
-      <Value>C:/Program Files/Arduino/libraries/Navigation/utility</Value>
-      <Value>C:/Program Files/Arduino/libraries/Navigation</Value>
-      <Value>C:/Program Files/Arduino/libraries/Electric/utility</Value>
-      <Value>C:/Program Files/Arduino/libraries/Electric</Value>
-      <Value>C:/Program Files/Arduino/libraries/ExtIO/utility</Value>
-      <Value>C:/Program Files/Arduino/libraries/ExtIO</Value>
       <Value>C:/Program Files/Arduino/libraries/Platform/utility</Value>
       <Value>C:/Program Files/Arduino/libraries/Platform</Value>
+      <Value>C:/Program Files/Arduino/libraries/Navigation/utility</Value>
+      <Value>C:/Program Files/Arduino/libraries/Navigation</Value>
+      <Value>C:/Program Files/Arduino/libraries/ExtIO/utility</Value>
+      <Value>C:/Program Files/Arduino/libraries/ExtIO</Value>
+      <Value>C:/Program Files/Arduino/libraries/Electric/utility</Value>
+      <Value>C:/Program Files/Arduino/libraries/Electric</Value>
+      <Value>C:/Program Files/Arduino/libraries/DS1302RTC/utility</Value>
+      <Value>C:/Program Files/Arduino/libraries/DS1302RTC</Value>
       <Value>../../RoverTest</Value>
       <Value>C:/Program Files/Arduino/hardware/arduino/variants/eightanaloginputs</Value>
       <Value>C:/Program Files/Arduino/hardware/arduino/cores/arduino</Value>

@@ -1,4 +1,4 @@
-/* 
+/*
 * AnalogGyro.cpp
 *
 * Created: 5/9/2015 15:47:35
@@ -36,9 +36,15 @@ namespace Navigation
 
         if (diff > 0)
         {
-            this->m_x += m_scale * (float)(this->m_sensor->get_ValueX() * diff);
-            this->m_y += m_scale * (float)(this->m_sensor->get_ValueY() * diff);
-            this->m_z += m_scale * (float)(this->m_sensor->get_ValueZ() * diff);
+            float fDiff = (float)diff;
+            this->m_x += this->m_scale * (float)(this->m_sensor->get_ValueX()) * fDiff;
+            this->m_y += this->m_scale * (float)(this->m_sensor->get_ValueY()) * fDiff;
+            this->m_z += this->m_scale * (float)(this->m_sensor->get_ValueZ()) * fDiff;
+
+            if (this->m_sensor->get_ValueZ() != 0)
+            {
+                Serial.println(this->m_sensor->get_ValueZ());
+            }
 
             this->m_lastUpdateMicros = currentMicros;
         }
